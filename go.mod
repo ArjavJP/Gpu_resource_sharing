@@ -1,4 +1,4 @@
-module decentralized-gpu-network
+module github.com/ArjavJP/Gpu_resource_sharing
 
 go 1.23.0
 
