@@ -6,7 +6,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	"decentralized-gpu-network/proto"
+	"github.com/ArjavJP/Gpu_resource_sharing/proto"
 )
 
 func main() {
