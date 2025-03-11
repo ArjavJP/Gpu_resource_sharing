@@ -1,0 +1,3 @@
+[cosmos]
+moniker = "gpu-network"
+chain-id = "gpuchain"

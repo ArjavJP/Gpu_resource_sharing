@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package gpu;
+
+option go_package = "./proto;proto";  // Replace with the actual Go package path
+
+service GPUService {
+    rpc AllocateGPU (AllocateRequest) returns (AllocateResponse);
+}
+
+message AllocateRequest {
+    string task_id = 1;
+    string gpu_type = 2;
+}
+
+message AllocateResponse {
+    bool success = 1;
+    string gpu_id = 2;
+}

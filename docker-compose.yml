@@ -1,0 +1,32 @@
+
+services:
+  network-service:
+    build:
+      context: .
+      dockerfile: docker/network-service/Dockerfile
+    ports:
+      - "5001:5001"
+    networks:
+      - gpu-network
+
+  payment-service:
+    build:
+      context: .
+      dockerfile: docker/payment-service/Dockerfile
+    ports:
+      - "5003:5003"
+    networks:
+      - gpu-network
+
+  scheduler-service:
+    build:
+      context: .
+      dockerfile: docker/scheduler-service/Dockerfile
+    ports:
+      - "5002:5002"
+    networks:
+      - gpu-network
+
+networks:
+  gpu-network:
+    driver: bridge
